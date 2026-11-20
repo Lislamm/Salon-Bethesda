@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Salón Bethesda - Belleza, estilo y elegancia. Agenda tu cita hoy." />
+  <title>Salón Bethesda | Belleza & Estilo</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- ===== AUDIO DE FONDO ===== -->
+  <audio id="bg-music" loop>
+    <source src="assets/audio/musica.mp3" type="audio/mpeg" />
+  </audio>
+  <button id="music-toggle" class="music-btn" title="Reproducir / Silenciar">
+    <i class="fa-solid fa-volume-xmark"></i>
+  </button>
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-content">
+      <a href="#inicio" class="logo">
+        <img src="assets/img/galeria/logo.png" alt="Salón" />
+        <span>Bethesda</span>
+      </a>
+      <nav>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#galeria">Galería</a></li>
+          <li><a href="#citas">Citas</a></li>
+          <li><a href="#ubicacion">Ubicación</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Menú">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== HERO / PORTADA ===== -->
+  <section id="inicio" class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>Salón Bethesda</h1>
+      <p>Tu bienestar, nuestra pasión. Tu Belleza también es salud.</p>
+      <div class="hero-buttons">
+        <a href="#citas" class="btn btn-primary">Agendar Cita</a>
+        <a href="#galeria" class="btn btn-outline">Ver Galería</a>
+      </div>
+    </div>
+    <a href="#nosotros" class="scroll-down"><i class="fa-solid fa-chevron-down"></i></a>
+  </section>
+
+  <!-- ===== NOSOTROS ===== -->
+  <section id="nosotros" class="section">
+    <div class="container about-grid">
+      <div class="about-text">
+        <h2 class="section-title">Sobre Nosotros</h2>
+        <p>En <strong>Dra. Lisbeti Fortún. En Salón Bethesda</strong> transformamos tu imagen con profesionalismo y calidez. Dedicado a resaltar tu belleza natural en un ambiente acogedor y moderno.</p>
+        <p>Ofrecemos servicios de estilismo, maquillaje,  tratamientos capilares y mucho más, siempre con productos de alta calidad.</p>
+        <a href="#citas" class="btn btn-primary">Reserva tu cita</a>
+      </div>
+      <div class="about-img">
+        <img src="assets/img/hero-bg.jpg" alt="Salón Bethesda" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICIOS ===== -->
+  <section id="servicios" class="section bg-light">
+    <div class="container">
+      <h2 class="section-title center">Nuestros Servicios</h2>
+      <h2 class="section-title center">- Tu confienza, en las mejores manos -</h2>
+      <div class="services-grid">
+        <div class="service-card"><i class="fa-solid fa-scissors"></i><h3>ESTÉTICA FACIAL</h3><p>💫 Limpieza facial o facial personalizada.</p><p>💫 Limpieza facial profunda.</p><p>💫 Exfoliación profesional (Dermaplaning/Microdermoabrasion).</p><p>💫 Electrolifting(Armonización facial).</p><p>💫 Microneelding/Dermapen.</p><p>💫 Rejuvenecimiento facial(Fibroblast/Plasma pen).</p><p>💫 Blafaroplastia sin cirugia(parpados caídos).</p><p>💫 Hidralips/Hidratación labial profunda.</p><p>💫 Tratamiento para imperfecciones o inestetismos: lunares, pecas, léntigos solares, puntos rubí, cicatrices de acné, verrugas, acrocordones.</p><p></p></div>
+        <div class="service-card"><i class="fa-solid fa-palette"></i><h3>ESTÉTICA CORPORAL</h3><p>💫 Aclaramiento de tatuajes.</p><p>💫 Tratamiento de estrías.</p><p>💫 Tratamiento de manchas en el cuerpo.</p><p>💫 Hidratación y tratamiento a manos ásperas y agrietadas.</p><p>💫 Reducción de flacidez(según el area).</p></div>
+        <div class="service-card"><i class="fa-solid fa-spa"></i><h3>PODOLOGÍA</h3><p>💫 Extracción de hiperratosis o callos.</p><p>💫 Trabajo profesional de los pies(talones agrietados, ásperos, resecos o deshidratados)*Con masaje incluido*.</p></div>
+        <div class="service-card"><i class="fa-solid fa-wand-magic-sparkles"></i><h3>MASAJE</h3><p>💫 Proximamente.</p></div>
+        <div class="service-card"><i class="fa-solid fa-crown"></i><h3>OTROS SERVICIOS</h3><p>💫 Alisado capilar a base de leche(para cabello afro).</p><p>💫 Anticaida y crecimiento capilar(según área y tratamiento).</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GALERÍA ===== -->
+  <section id="galeria" class="section">
+    <div class="container">
+      <h2 class="section-title center">Galería</h2>
+      <p class="section-subtitle">Nuestros trabajos más recientes</p>
+      <div class="gallery-grid" id="gallery-grid">
+        <!-- Las imágenes se cargan desde JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CITAS ===== -->
+  <section id="citas" class="section bg-light">
+    <div class="container">
+      <h2 class="section-title center">Agenda tu Cita</h2>
+      <p class="section-subtitle">Completa el formulario y envía por WhatsApp</p>
+      <form class="cita-form" id="cita-form">
+        <div class="form-row">
+          <input type="text" id="nombre" placeholder="Tu nombre completo" required />
+          <input type="tel" id="telefono" placeholder="Tu teléfono" required />
+        </div>
+        <div class="form-row">
+          <select id="servicio" required>
+            <option value="">Selecciona un servicio</option>
+            <option>Estética facial</option>
+            <option>Estética corporal</option>
+            <option>Podología</option>
+            <option>Masaje</option>
+            <option>Cabello</option>
+          </select>
+          <input type="date" id="fecha" required />
+        </div>
+        <div class="form-row">
+          <input type="time" id="hora" required />
+          <textarea id="mensaje" rows="3" placeholder="Comentarios adicionales (opcional)"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">
+          <i class="fa-brands fa-whatsapp"></i> Enviar por WhatsApp
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===== UBICACIÓN ===== -->
+  <section id="ubicacion" class="section">
+    <div class="container">
+      <h2 class="section-title center">Ubicación</h2>
+      <p class="section-subtitle"><i class="fa-solid fa-location-dot"></i> Visítanos en nuestra dirección</p>
+      <div class="map-container">
+        <iframe
+          src="https://www.google.com/maps?q=Placetas+9na del Oeste 5 y 6 del Sur+Cuba&output=embed"
+          width="100%" height="450" style="border:0;" allowfullscreen loading="lazy">
+        </iframe>
+      </div>
+      <p class="address-text"><strong>Dirección:</strong> 9na del Oeste/ 5 y 6 del Sur,Villa Clara, Placetas, Cuba.</p>
+    </div>
+  </section>
+
+  <!-- ===== REDES SOCIALES ===== -->
+  <section id="contacto" class="section bg-dark">
+    <div class="container">
+      <h2 class="section-title center light">Síguenos en Redes Sociales.</h2>
+      <div class="social-grid">
+        <a href="https://facebook.com/tu-pagina" target="_blank" class="social-card facebook">
+          <i class="fa-brands fa-facebook-f"></i>
+          <h3>Facebook</h3>
+          <p>Conoce nuestras novedades</p>
+        </a>
+        <a href="https://instagram.com/tu-cuenta" target="_blank" class="social-card instagram">
+          <i class="fa-brands fa-instagram"></i>
+          <h3>Instagram</h3>
+          <p>Mira nuestros trabajos</p>
+        </a>
+        <a href="https://chat.whatsapp.com/TU-CODIGO-GRUPO" target="_blank" class="social-card whatsapp">
+          <i class="fa-brands fa-whatsapp"></i>
+          <h3>Grupo WhatsApp</h3>
+          <p>Únete a la comunidad</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span>  Bethesda |Salón de Estética Avanzada. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- ===== BOTÓN FLOTANTE WHATSAPP ===== -->
+  <a href="https://wa.me/5358512770?text=Hola%20Sal%C3%B3n%20Bethesda,%20quiero%20agendar una cita."
+     class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- ===== LIGHTBOX GALERÍA ===== -->
+  <div class="lightbox" id="lightbox">
+    <span class="close-lightbox">&times;</span>
+    <img src="" alt="Vista ampliada" id="lightbox-img" />
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
