@@ -12,12 +12,20 @@
 </head>
 <body>
 
+  <!-- ===== AUDIO DE FONDO ===== -->
+  <audio id="bg-music" loop>
+    <source src="assets/audio/musica.mp3" type="audio/mpeg" />
+  </audio>
+  <button id="music-toggle" class="music-btn" title="Reproducir / Silenciar">
+    <i class="fa-solid fa-volume-xmark"></i>
+  </button>
+
   <!-- ===== NAVBAR ===== -->
   <header class="navbar" id="navbar">
     <div class="container nav-content">
       <a href="#inicio" class="logo">
         <img src="assets/img/galeria/logo.png" alt="Salón" />
-        <span>Salón Bethesda</span>
+        <span>Bethesda</span>
       </a>
       <nav>
         <ul class="nav-links" id="nav-links">
@@ -40,7 +48,7 @@
   <section id="inicio" class="hero">
     <div class="hero-overlay"></div>
     <div class="hero-content">
-      <h1>Bethesda</h1>
+      <h1>Salón Bethesda</h1>
       <p>Tu bienestar, nuestra pasión. Tu Belleza también es salud.</p>
       <div class="hero-buttons">
         <a href="#citas" class="btn btn-primary">Agendar Cita</a>

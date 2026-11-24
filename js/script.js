@@ -15,6 +15,38 @@ navLinks.querySelectorAll('a').forEach(link =>
   link.addEventListener('click', () => navLinks.classList.remove('active'))
 );
 
+// ===== MÚSICA DE FONDO =====
+const music = document.getElementById('bg-music');
+const musicBtn = document.getElementById('music-toggle');
+let musicStarted = false;
+
+// Intentar reproducir al primer clic/interacción del usuario (política del navegador)
+function tryPlayMusic() {
+  if (musicStarted) return;
+  music.volume = 0.25;
+  music.play().then(() => {
+    musicStarted = true;
+    musicBtn.classList.add('playing');
+    musicBtn.innerHTML = '<i class="fa-solid fa-volume-high"></i>';
+  }).catch(err => console.log('Autoplay bloqueado:', err));
+}
+document.body.addEventListener('click', tryPlayMusic, { once: true });
+document.body.addEventListener('touchstart', tryPlayMusic, { once: true });
+
+// Botón mute / play
+musicBtn.addEventListener('click', (e) => {
+  e.stopPropagation();
+  if (music.paused) {
+    music.play();
+    musicBtn.classList.add('playing');
+    musicBtn.innerHTML = '<i class="fa-solid fa-volume-high"></i>';
+  } else {
+    music.pause();
+    musicBtn.classList.remove('playing');
+    musicBtn.innerHTML = '<i class="fa-solid fa-volume-xmark"></i>';
+  }
+});
+
 // ===== GALERÍA DINÁMICA =====
 // Cambia los nombres por tus imágenes reales dentro de assets/img/galeria/
 const galleryImages = [
@@ -53,6 +85,7 @@ lightbox.addEventListener('click', (e) => {
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') lightbox.classList.remove('active');
 });
+
 
 // ===== FORMULARIO CITAS → WHATSAPP =====
 const WHATSAPP_NUMBER = '5358512770'; // ⚠️ CAMBIA por tu número real (código país + número)
