@@ -57,9 +57,8 @@ document.addEventListener('keydown', (e) => {
 // ===== FORMULARIO CITAS → WHATSAPP =====
 const WHATSAPP_NUMBER = '5358512770'; // ⚠️ CAMBIA por tu número real (código país + número)
 
-document.getElementById('cita-form').addEventListener('submit', (e) => {
+document.getElementById('cita-form').addEventListener('submit', function (e) {
   e.preventDefault();
-
   const nombre   = document.getElementById('nombre').value.trim();
   const telefono = document.getElementById('telefono').value.trim();
   const servicio = document.getElementById('servicio').value;
@@ -68,14 +67,13 @@ document.getElementById('cita-form').addEventListener('submit', (e) => {
   const mensaje  = document.getElementById('mensaje').value.trim();
 
   const texto =
-    `Hola Salón Bethesda 💫%0A` +
-    `Quisiera agendar una cita:%0A%0A` +
-    `👤 *Nombre:* ${nombre}%0A` +
-    `📞 *Teléfono:* ${telefono}%0A` +
-    `💅 *Servicio:* ${servicio}%0A` +
-    `📅 *Fecha:* ${fecha}%0A` +
-    `🕐 *Hora:* ${hora}%0A` +
-    (mensaje ? `📝 *Comentarios:* ${mensaje}` : '');
+    `Hola Salón Bethesda, quiero agendar una cita.%0A%0A` +
+    `👤 Nombre: ${encodeURIComponent(nombre)}%0A` +
+    `📞 Teléfono: ${encodeURIComponent(telefono)}%0A` +
+    `💆 Servicio: ${encodeURIComponent(servicio)}%0A` +
+    `📅 Fecha: ${encodeURIComponent(fecha)}%0A` +
+    `⏰ Hora: ${encodeURIComponent(hora)}` +
+    (mensaje ? `%0A📝 Notas: ${encodeURIComponent(mensaje)}` : '');
 
-  window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${texto}`, '_blank');
+  window.open(`https://wa.me/5358512770?text=${texto}`, '_blank');
 });
